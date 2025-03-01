@@ -21,7 +21,7 @@ class RegisterUser(CreateView):
     form_class = RegisterUserForm
     template_name = 'users/register.html'
     extra_context = {'title': 'Регистрация'}
-    success_url = reverse_lazy('user:login')
+    success_url = reverse_lazy('users:login')
 
 
 class ProfileUser(LoginRequiredMixin, UpdateView):
